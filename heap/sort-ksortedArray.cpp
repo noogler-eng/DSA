@@ -1,18 +1,19 @@
-// 2. k largest element in an array in vector
-// input -> arr {7, 10,4, 3, 20, 15}, k = 3
-// output -> {10, 15,20}
-
+// 3. sort a k sorted array
+// array is given where in next k the element is given for actual position
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
-vector<int> kLargestArray(vector<int> &v, int k){
-    vector<int> ans;
-    priority_queue<int, vector<int>, greater<int>> s;
+vector<int> getSortedArray(vector<int> &v, int k){
     int n = v.size();
+    vector<int> ans;
+    // here we are taking min heap
+    priority_queue<int, vector<int>, greater<int>> s;
 
     for(int i=0; i<n; i++){
         s.push(v[i]);
         if(s.size() > k){
+            int x = s.top();
+            ans.push_back(x);
             s.pop();
         }
     }
@@ -25,11 +26,10 @@ vector<int> kLargestArray(vector<int> &v, int k){
 
     return ans;
 }
-
 int main(){
-    vector<int>v{7, 10,4, 3, 20, 15};
+    vector<int> v{6, 5, 3, 2, 8, 10, 9};
     int k = 3;
-    vector<int> ans = kLargestArray(v, k);
+    vector<int> ans = getSortedArray(v, k);
     for(auto i: ans){
         cout<<i<<" ";
     }

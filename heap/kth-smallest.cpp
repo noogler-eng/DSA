@@ -1,3 +1,7 @@
+// 1. kth smallest element in an array
+// input -> arr {7, 10,4, 3, 20, 15}, k = 3
+// output -> 7
+
 #include<iostream>
 #include<bits/stdc++.h>
 using namespace std;
