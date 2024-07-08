@@ -1,3 +1,8 @@
+// Number of provinces or island prsent in a matric
+// 1. adjacency list
+// 2. traversing each, checking wheather visited or not
+// 3. if not then dfs -> loop
+
 class Solution {
 public:
     void dfs(int node, vector<vector<int>> &adj, vector<int> &vis){
