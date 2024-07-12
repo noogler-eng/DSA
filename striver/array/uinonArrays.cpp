@@ -9,7 +9,7 @@ int main(){
     vector<int> ans = unionTwoArray(v1, v2);
 
     for(auto i: ans){
-        cout<<i<<" "<<endl;
+        cout<<i<<" ";
     }
     return 0;
 }
